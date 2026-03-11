@@ -658,3 +658,99 @@ footer {
 .next-project a:hover h2 {
     font-style: italic;
 }
+
+/* Project Page Specifics */
+.project-hero {
+    height: 120vh; /* Taller for dramatic scroll */
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-image-full {
+    width: 100%;
+    height: 100%;
+}
+
+.hero-image-full img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-title-container {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+}
+
+.project-content {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 50px;
+    padding: 100px 5%;
+}
+
+.sticky-info {
+    position: sticky;
+    top: 150px;
+}
+
+.info-block {
+    margin-bottom: 40px;
+}
+
+.info-block h4 {
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    opacity: 0.4;
+    margin-bottom: 10px;
+}
+
+.info-block p {
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+.gallery-item {
+    margin-bottom: 100px;
+}
+
+.gallery-item img {
+    width: 100%;
+    display: block;
+}
+
+/* Next Project Footer */
+.next-project {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.next-project a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+
+.next-project .label {
+    display: block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    margin-bottom: 20px;
+    opacity: 0.5;
+}
+
+.next-project h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 5vw;
+    transition: font-style 0.3s ease;
+}
+
+.next-project a:hover h2 {
+    font-style: italic;
+}

@@ -254,3 +254,29 @@ gsap.to(".hero-image-full img", {
     y: 200,
     ease: "none"
 });
+
+// Vertical Gallery Fade In
+gsap.utils.toArray('.gallery-item').forEach((item) => {
+    gsap.from(item, {
+        scrollTrigger: {
+            trigger: item,
+            start: "top 90%",
+            toggleActions: "play none none reverse"
+        },
+        y: 60,
+        opacity: 0,
+        duration: 1.5,
+        ease: "power3.out"
+    });
+});
+
+// Parallax for the project hero image
+gsap.to(".hero-image-full img", {
+    scrollTrigger: {
+        trigger: ".project-hero",
+        start: "top top",
+        scrub: true
+    },
+    y: 200,
+    ease: "none"
+});
