@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-
+    <button id="theme-toggle" aria-label="Toggle Dark Mode">Dark Mode</button>
     <div class="cursor"></div>
     <div class="cursor-follower"></div>
 
@@ -17,6 +17,7 @@
             <div class="logo">SAI CANT DESIGN
             </div>
             <div class="nav-links">
+                
                 <a href="#work">Work</a>
                 <a href="#about">About</a>
                 <a href="#contact">Contact</a>
@@ -24,7 +25,7 @@
         </nav>
 
         <header class="hero">
-            <h1 class="reveal-text">UNDESIGND <span>By SAI</span></h1>
+            <h1 class="reveal-text">UNDESIGN*D <span>By SAI</span></h1>
             <div class="hero-image-container">
                 <div class="hero-bg" style="background-image: url('HEROCOCK1.png');"></div>
             </div>
@@ -109,5 +110,31 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
     <script src="script.js"></script>
+    <script>
+  const toggleBtn = document.getElementById('theme-toggle');
+  const currentTheme = localStorage.getItem('theme');
+
+  // Check for saved user preference
+  if (currentTheme) {
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    if (currentTheme === 'dark') {
+      toggleBtn.textContent = 'Light Mode';
+    }
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    let theme = document.documentElement.getAttribute('data-theme');
+    
+    if (theme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'light');
+      localStorage.setItem('theme', 'light');
+      toggleBtn.textContent = 'Dark Mode';
+    } else {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      localStorage.setItem('theme', 'dark');
+      toggleBtn.textContent = 'Light Mode';
+    }
+  });
+</script>
 </body>
 </html>
